@@ -1,0 +1,24 @@
+<!--
+  Generated template for the PostPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar [hideBackButton]="true">
+    <ion-buttons left>
+      <button ion-button icon-only (click)="navCtrl.pop()">
+        <img src="/assets/icon/close.png" alt="Close">
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <h2>{{item.title}}</h2>
+  <p [innerHTML]="item.resume"></p>
+  <img class="post-image" [src]="item.image" />
+  <p [innerHTML]="item.body"></p>
+  <div class="blog-date">Publicado em {{item.date}}</div>
+</ion-content>

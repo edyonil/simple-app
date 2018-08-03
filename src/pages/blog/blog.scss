@@ -1,0 +1,11 @@
+@import "../../theme/variables";
+page-blog {
+  .item {
+    padding-left: 0;
+    ion-label {
+      border-bottom: 1px solid rgba($primary, 0.14);
+      padding: 15px 0;
+    }
+  }
+}
+
