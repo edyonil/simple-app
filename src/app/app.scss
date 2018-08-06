@@ -31,9 +31,6 @@ body {
 ion-content.content {
   background-color: #FEFFFE;
 }
-.scroll-content {
-  padding-top: 25px !important;
-}
 
 h1, h2, h3, h4, h4 {
   font-family: $fonte-pattern;
@@ -46,6 +43,7 @@ h1 {
   color: $dark;
   margin-bottom: 30px;
 }
+
 h2, .item h2 {
   font-weight: 900;
   font-size: 16px;
@@ -53,12 +51,22 @@ h2, .item h2 {
   color: $dark;
   margin: 10px 0px;
 }
+
 p, .item p {
   font-family: SFProText;
   font-size: 12px;
   line-height: 24px;
   color: $dark;
   margin: 0;
+}
+
+.scroll-content {
+  padding-top: 25px;
+}
+
+.toolbar-title {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 ion-label {
@@ -92,4 +100,68 @@ ion-header {
 
 .bar-buttons[left] {
   margin-left:15px;
+}
+
+.menu-inner {
+
+  $white: white;
+
+  ion-header, .scroll-content, ion-item, ion-list {
+    background-color: $primary;
+    opacity: .98;
+  }
+
+  .scroll-content {
+    padding: 25px 25px 0 9px !important;
+  }
+
+  .scroll-content ion-item .item-inner {
+    border: none;
+  }
+
+  button {
+    background-color: inherit;
+    color: $white;
+  }
+
+  h1 {
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 10px;
+  }
+
+  h1, ion-icon {
+    color: $white;
+  }
+
+  small {
+    color: $white;
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+  .scroll-content .rodape-menu {
+    // position: relative;
+    // bottom: 1px;
+    // left: 0;
+    // padding-left: 0;
+  }
+ 
+  .toolbar-title {
+    font-size: 25px;
+  }
+
+  ion-navbar{
+    padding: 0 25px !important;
+    border-bottom: 1px solid $white;
+  }
+
+  button .item-inner {
+    padding: 20px 0;
+    padding-right: 0 !important;
+  }
+  
+  button .item-inner .item-end {
+    margin-right: 0 !important;
+  }
 }

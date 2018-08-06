@@ -75,12 +75,12 @@ page-login {
 
     .button-register {
         @extend %button;
-        bottom: 10%;
-        width: calc(100% - 66px);
+        // bottom: 10%;
+        // width: calc(100% - 66px);
         text-transform: capitalize;
         border: 1px solid $secondary;
         color: $secondary;
-        position: absolute;
+        // position: absolute;
     }
 
     .button-forgetter { 
