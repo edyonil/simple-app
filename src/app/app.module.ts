@@ -13,6 +13,7 @@ import {PostPage} from "../pages/post/post";
 import {LoginPage} from '../pages/login/login';
 import {InternoPage} from '../pages/interno/interno';
 import {JusticaPage} from '../pages/justica/justica';
+import {NotificacaoPage} from '../pages/notificacao/notificacao';
 
 @NgModule({
     declarations: [
@@ -23,7 +24,8 @@ import {JusticaPage} from '../pages/justica/justica';
         PostPage,
         LoginPage,
         InternoPage,
-        JusticaPage
+        JusticaPage,
+        NotificacaoPage
     ],
     imports: [
         BrowserModule,
@@ -40,7 +42,8 @@ import {JusticaPage} from '../pages/justica/justica';
         PostPage,
         LoginPage,
         InternoPage,
-        JusticaPage
+        JusticaPage,
+        NotificacaoPage
     ],
     providers: [
         StatusBar,
