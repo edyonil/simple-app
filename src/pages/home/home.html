@@ -1,25 +1,4 @@
 <ion-header>
-  <!-- <ion-navbar>
-
-        <ion-buttons>
-            <button ion-button icon-only>
-                <ion-icon name="star"></ion-icon>
-            </button>
-          </ion-buttons>
-        <ion-title>
-            Page Title
-          </ion-title>
-    <ion-buttons end>
-      <button ion-button icon-only>
-          <ion-icon name="star"></ion-icon>
-      </button>
-      <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>      
-      </button>
-    </ion-buttons>
-   
-  </ion-navbar> -->
-
   <ion-navbar>
 
     <button ion-button clear icon-only start>
@@ -32,7 +11,7 @@
 
     <ion-buttons end>
       <button ion-button icon-only>
-          <ion-icon name="star"></ion-icon>
+          <ion-icon name="notifications"></ion-icon>
         </button>
     </ion-buttons>
   </ion-navbar>
@@ -41,5 +20,68 @@
 </ion-header>
 
 <ion-content>
+  <!-- <ion-tabs tabsPlacement="top">
+    <ion-tab [root]="tab1" tabTitle="Interno"></ion-tab>
+    <ion-tab [root]="tab2" tabTitle="Justiça"></ion-tab>
+  </ion-tabs> -->
+
   <h1>Bruno Santana</h1>
+  <p>Cliente há 2 anos</p>
+
+  <h2>Seus processos</h2>
+
+  <ion-list>
+    <ion-item>
+      <ion-row>
+          <ion-col>
+            <span><strong>Ação:</strong> FGTS</span>
+          </ion-col>
+          <ion-col align-self-center text-right>
+            <ion-note item-end class="note note-ios"><small>3:43 pm</small></ion-note>
+          </ion-col>
+        </ion-row>
+      <button class="item item-block item-ios" ion-item>
+        <span class="corrige-label">Aguardando envio para tribunal de justiça do trabalho</span>
+      </button>
+    </ion-item>
+    <ion-item>
+      <ion-row>
+          <ion-col>
+            <span><strong>Ação:</strong> FGTS</span>
+          </ion-col>
+          <ion-col align-self-center text-right>
+            <ion-note item-end class="note note-ios"><small>3:43 pm</small></ion-note>
+          </ion-col>
+        </ion-row>
+      <button class="item item-block item-ios" ion-item>
+        <span class="corrige-label">Aguardando envio para tribunal de justiça do trabalho</span>
+      </button>
+    </ion-item>
+    <ion-item>
+      <ion-row>
+          <ion-col>
+            <span><strong>Ação:</strong> FGTS</span>
+          </ion-col>
+          <ion-col align-self-center text-right>
+            <ion-note item-end class="note note-ios"><small>3:43 pm</small></ion-note>
+          </ion-col>
+        </ion-row>
+      <button class="item item-block item-ios" ion-item>
+        <span class="corrige-label">Aguardando envio para tribunal de justiça do trabalho</span>
+      </button>
+    </ion-item>
+    <ion-item>
+        <ion-row>
+          <ion-col>
+            <span><strong>Ação:</strong> FGTS</span>
+          </ion-col>
+          <ion-col align-self-center text-right>
+            <ion-note item-end class="note note-ios"><small>3:43 pm</small></ion-note>
+          </ion-col>
+        </ion-row>
+        <button class="item item-block item-ios" ion-item>
+          <span class="corrige-label">Aguardando envio para tribunal de justiça do trabalho</span>
+        </button>
+      </ion-item>
+  </ion-list>
 </ion-content>

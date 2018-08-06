@@ -8,4 +8,44 @@ page-home {
     .scroll-content {
         padding: 0 25px;
     }
+
+    .item-ios.item-block .item-inner {
+        border: none;
+    }
+
+    .item-md {
+        padding-left: 0;
+    }
+
+    .item.item-block.item-md .item-inner .input-wrapper .label.label-md {
+        margin-top: 20px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .item.item-block.item-ios.item-md .item-inner .input-wrapper .label.label-md {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .item.item-block.item-md .item-inner {
+        padding-right: 0;
+    }
+
+    .item.item-block.item-ios.item-md .item-inner {
+        margin-right: -15px;
+    }
+
+    .col {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .note.note-ios.note-md {
+        margin: 0;
+    }
+
+    .corrige-label {
+        padding-right: 30px !important;
+        display: block;
+    }
 }
