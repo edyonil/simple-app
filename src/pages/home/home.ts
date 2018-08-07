@@ -3,6 +3,7 @@ import { NavController, MenuController, Tabs, ModalController } from 'ionic-angu
 import { InternoPage } from '../interno/interno';
 import { JusticaPage } from '../justica/justica';
 import { NotificacaoPage } from '../notificacao/notificacao';
+import { PerfilPage } from '../perfil/perfil';
 
 
 @Component({
@@ -59,6 +60,14 @@ export class HomePage {
     let profileModal = this.modalCtrl.create(NotificacaoPage);
 
     profileModal.present();
-}
+  }
+
+  public goToPerfil(slug: string){
+    let perfilModal = this.modalCtrl.create(PerfilPage, {
+      slug: slug
+    });
+
+    perfilModal.present();
+  }
 
 }

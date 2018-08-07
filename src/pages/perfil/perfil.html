@@ -1,0 +1,74 @@
+<!--
+  Generated template for the PerfilPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-navbar [hideBackButton]="true">
+        <ion-buttons left>
+          <button ion-button icon-only (click)="navCtrl.pop()">
+            <img src="/assets/icon/close.png" alt="Close">
+          </button>
+        </ion-buttons>
+        <ion-buttons right>
+          <button ion-button icon-only (click)="editar('bruno-santana')">
+            <ion-icon name="create"></ion-icon>
+          </button>
+          </ion-buttons>
+      </ion-navbar>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <div class="perfil-header">
+      <h1>Seu Perfil</h1>
+    </div>
+    <div class="dados-perfil">
+      <h1>{{perfil.name}}</h1>
+      <p>{{perfil.age}}</p>
+    </div>    
+    <div class="dados-pessoais">
+      <h2>Dados Pessoais</h2>
+      <ion-list>
+        <div ion-item>
+          <small><strong>CPF</strong></small>
+          <div class="item-note" item-end>
+            {{perfil.cpf}}
+          </div>
+        </div>
+        <div ion-item>
+          <small><strong>DATA DE NASCIMENTO</strong></small>
+          <div class="item-note" item-end>
+            {{perfil.dateBirth}}
+          </div>
+        </div>
+        <div ion-item>
+          <small><strong>PIS</strong></small>
+          <div class="item-note" item-end>
+            {{perfil.pis}}
+          </div>
+        </div>
+        <div ion-item>
+          <small><strong>ESTADO CIVIL</strong></small>
+          <div class="item-note" item-end>
+            {{perfil.civil}}
+          </div>
+        </div>
+        <div ion-item>
+          <small><strong>PROFISSÃO</strong></small>
+          <div class="item-note" item-end>
+            {{perfil.profissao}}
+          </div>
+        </div>
+        <div ion-item>
+          <small><strong>APOSENTADO(A)</strong></small>
+          <div class="item-note" item-end>
+            {{perfil.aposentado?'Sim':'Não'}} <span *ngIf="perfil.aposentado">, Desde {{perfil.aposentadoAno}}</span>
+          </div>
+        </div>
+      </ion-list>
+    </div>
+</ion-content>

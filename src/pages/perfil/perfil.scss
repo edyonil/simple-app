@@ -1,0 +1,53 @@
+page-perfil {
+    .scroll-content {
+
+        padding: 25px !important;
+
+        .perfil-header {
+
+            position: relative;
+
+            h1 {
+                margin-top: 0;
+            }
+
+            h1::after {
+                content: "__";
+                position: absolute;
+                top: -16px;
+                right: -47px;
+                font-size: 37px !important;
+                color: $primary;
+            }
+        }
+    }
+
+    .dados-perfil {
+        margin-bottom: 30px;
+        
+        h1 {
+            margin-bottom: 0;
+            color: $primary;
+        }
+
+        p {
+            color: $primary;
+        }
+    }
+
+    .dados-pessoais {
+        ion-list .item.item-block.item-md {
+            padding-left: 0;
+
+            .item-inner {
+                padding-right: 0;
+
+                .item-note { 
+                    margin: 0;
+                }   
+            } 
+        }
+    }
+
+
+}
