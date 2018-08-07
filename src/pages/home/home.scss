@@ -38,6 +38,14 @@ page-home {
     .col {
         padding-left: 0;
         padding-right: 0;
+
+        span strong {
+            color: $primary;
+            font-weight: 900;
+        }
+        ion-note {
+            color: $primary;
+        }
     }
 
     .note.note-ios.note-md {
@@ -47,5 +55,52 @@ page-home {
     .corrige-label {
         padding-right: 30px !important;
         display: block;
+    }
+
+    .content-header {        
+        margin-bottom: 30px;
+        position: relative;
+
+        h1 {
+            margin-bottom: 0;
+        }
+    
+        h1::after {
+            content: "__";
+            position: absolute;
+            top: -16px;
+            left: -47px;
+            font-size: 37px !important;
+            color: $primary;
+        }
+
+        p {
+            color: $primary;
+            font-size: 12px;
+        }
+    }
+
+    .processo-header {
+        position: relative;
+
+        h2 {
+            color: $primary;
+        }
+
+        h2::after {
+            content: "__";
+            position: absolute;
+            top: -18px;
+            left: -47px;
+            font-size: 37px !important;
+            color: $primary;
+        }
+    }
+
+    .logo-decoration {
+        position: absolute;
+        top: -10px;
+        right: -47px;
+        font-size: 50px;
     }
 }

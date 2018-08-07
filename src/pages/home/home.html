@@ -25,63 +25,29 @@
     <ion-tab [root]="tab2" tabTitle="Justiça"></ion-tab>
   </ion-tabs> -->
 
-  <h1>Bruno Santana</h1>
-  <p>Cliente há 2 anos</p>
+  <div class="content-header">
+    <h1>Bruno Santana</h1>
+    <p>Cliente há 2 anos</p>
+    <ion-icon class="logo-decoration" name="logo-angular"></ion-icon>
+  </div>
 
-  <h2>Seus processos</h2>
+  <div class="processo-header">
+    <h2>Seus processos</h2>
+  </div>
 
   <ion-list>
-    <ion-item>
+    <ion-item *ngFor="let item of itens">
       <ion-row>
           <ion-col>
-            <span><strong>Ação:</strong> FGTS</span>
+            <span><strong>Ação:</strong> {{item.action}}</span>
           </ion-col>
-          <ion-col align-self-center text-right>
-            <ion-note item-end class="note note-ios"><small>3:43 pm</small></ion-note>
+          <ion-col text-right>
+            <ion-note item-end class="note note-ios"><small>{{item.date}}</small></ion-note>
           </ion-col>
         </ion-row>
       <button class="item item-block item-ios" ion-item>
-        <span class="corrige-label">Aguardando envio para tribunal de justiça do trabalho</span>
+        <span class="corrige-label">{{item.resume}}</span>
       </button>
     </ion-item>
-    <ion-item>
-      <ion-row>
-          <ion-col>
-            <span><strong>Ação:</strong> FGTS</span>
-          </ion-col>
-          <ion-col align-self-center text-right>
-            <ion-note item-end class="note note-ios"><small>3:43 pm</small></ion-note>
-          </ion-col>
-        </ion-row>
-      <button class="item item-block item-ios" ion-item>
-        <span class="corrige-label">Aguardando envio para tribunal de justiça do trabalho</span>
-      </button>
-    </ion-item>
-    <ion-item>
-      <ion-row>
-          <ion-col>
-            <span><strong>Ação:</strong> FGTS</span>
-          </ion-col>
-          <ion-col align-self-center text-right>
-            <ion-note item-end class="note note-ios"><small>3:43 pm</small></ion-note>
-          </ion-col>
-        </ion-row>
-      <button class="item item-block item-ios" ion-item>
-        <span class="corrige-label">Aguardando envio para tribunal de justiça do trabalho</span>
-      </button>
-    </ion-item>
-    <ion-item>
-        <ion-row>
-          <ion-col>
-            <span><strong>Ação:</strong> FGTS</span>
-          </ion-col>
-          <ion-col align-self-center text-right>
-            <ion-note item-end class="note note-ios"><small>3:43 pm</small></ion-note>
-          </ion-col>
-        </ion-row>
-        <button class="item item-block item-ios" ion-item>
-          <span class="corrige-label">Aguardando envio para tribunal de justiça do trabalho</span>
-        </button>
-      </ion-item>
   </ion-list>
 </ion-content>
