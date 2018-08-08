@@ -1,13 +1,18 @@
-<!--
-  Generated template for the AcompanhamentoHomePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-
 <ion-content padding>
     <div class="processo-header">
         <h1>Acompanhamento de processo</h1>
         <span>Entrada em 23/05/2018</span>
     </div>
+
+    <h3>
+        Ação contra a XAS Engenhária avaliada em R$32.000,90
+    </h3>
+
+    <ion-list>
+        <ion-item *ngFor="let fase of fases" [class.ativo]="!fase.ativo">
+            <h2>{{fase.nome}}</h2>
+            <p>{{fase.conteudo}}</p>
+            <span class="fase-data">{{(fase.ativo) ? 'Em ' + fase.data : 'Em breve'}}</span>
+        </ion-item>
+      </ion-list>
 </ion-content>

@@ -1,3 +1,46 @@
+@import "../../theme/variables";
 page-acompanhamento {
+  h1 {
+    &::before {
+      content: "__";
+      font-size: 37px;
+      color: #0B4A76;
+      float: right;
+      margin-right: -40px;
+      margin-top: -15px;
+    }
+  }
+  .tabs {
+    .tab-button-icon{
+      font-size: 16px;
+      color: $primary;
+      margin-bottom: 3px;
+    }
+    .tabbar {
+      height: 70px;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+    }
+  }
+  .tabs .tab-button {
+    height: 70px;
+    .tab-button-text {
+      font-family: $fonte-pattern;
+      color: $primary;
+      font-size: 8px;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+  }
+  .tabs .tab-button[aria-selected=true] {
+    border-top: 5px solid $primary;
+    padding: 0;
+    background-color: #eeeeee;
+    box-shadow: inset -3px 4px 2px 0 rgba(0, 0, 0, 0.08);
+    .tab-button-icon{
+      font-size: 16px;
+      color: $primary;
+    }
+  }
 
 }
