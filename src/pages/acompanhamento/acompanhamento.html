@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar [hideBackButton]="true">
+    <ion-buttons left>
+      <button ion-button icon-only (click)="navCtrl.pop()">
+        <img src="/assets/icon/close.png" alt="Close">
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-tabs>
+      <ion-tab [root]="tabs.primeira.page" tabTitle="{{tabs.primeira.title}}" tabIcon="{{tabs.primeira.icon}}"></ion-tab>
+      <ion-tab [root]="tabs.segunda.page" tabTitle="{{tabs.segunda.title}}" tabIcon="{{tabs.segunda.icon}}"></ion-tab>
+      <ion-tab [root]="tabs.terceira.page" tabTitle="{{tabs.terceira.title}}" tabIcon="{{tabs.terceira.icon}}"></ion-tab>
+    </ion-tabs>
+</ion-content>

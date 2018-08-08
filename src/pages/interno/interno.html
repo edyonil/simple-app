@@ -1,6 +1,6 @@
 <ion-content padding style="padding-bottom: 300px !important">
   <ion-list>
-    <ion-item *ngFor="let item of itens">
+    <ion-item *ngFor="let item of itens" (tap)="show()">
       <ion-row>
           <ion-col>
             <span><strong>Ação:</strong> {{item.action}}</span>

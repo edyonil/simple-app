@@ -15,6 +15,10 @@ import {InternoPage} from '../pages/interno/interno';
 import {JusticaPage} from '../pages/justica/justica';
 import {NotificacaoPage} from '../pages/notificacao/notificacao';
 import {PerfilPage} from '../pages/perfil/perfil';
+import { AcompanhamentoHomePage } from '../pages/acompanhamento-home/acompanhamento-home';
+import { AcompanhamentoListaMensagensPage } from '../pages/acompanhamento-lista-mensagens/acompanhamento-lista-mensagens';
+import { AcompanhamentoPage } from '../pages/acompanhamento/acompanhamento';
+import { AcompanhamentoListaDocumentosPage } from '../pages/acompanhamento-lista-documentos/acompanhamento-lista-documentos';
 
 @NgModule({
     declarations: [
@@ -27,7 +31,11 @@ import {PerfilPage} from '../pages/perfil/perfil';
         InternoPage,
         JusticaPage,
         NotificacaoPage,
-        PerfilPage
+        PerfilPage,
+        AcompanhamentoPage,
+        AcompanhamentoHomePage,
+        AcompanhamentoListaDocumentosPage,
+        AcompanhamentoListaMensagensPage
     ],
     imports: [
         BrowserModule,
@@ -46,7 +54,11 @@ import {PerfilPage} from '../pages/perfil/perfil';
         InternoPage,
         JusticaPage,
         NotificacaoPage,
-        PerfilPage
+        PerfilPage,
+        AcompanhamentoPage,
+        AcompanhamentoHomePage,
+        AcompanhamentoListaDocumentosPage,
+        AcompanhamentoListaMensagensPage
     ],
     providers: [
         StatusBar,
