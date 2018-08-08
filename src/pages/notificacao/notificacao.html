@@ -21,7 +21,7 @@
   </div>
 
   <ion-item *ngFor="let item of itens">
-    <button class="item item-block item-ios" ion-item>
+    <button class="item item-block item-ios" ion-item (tap)="goTo(item.type, item.id)">
       <span class="corrige-label" [innerHTML]="item.resume"></span>
     </button>
     <small [innerHTML]="item.date"></small>
