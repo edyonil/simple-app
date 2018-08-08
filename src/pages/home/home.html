@@ -2,7 +2,7 @@
   <ion-navbar>
 
     <button ion-button clear icon-only start>
-      <ion-icon name="logo-angular"></ion-icon>
+      <img src="/assets/imgs/logo_menor.png" />
     </button>
 
     <button ion-button icon-only menuToggle end>
@@ -36,8 +36,8 @@
   </div>
   <ion-content>
     <ion-tabs tabsPlacement='top'>
-      <ion-tab [root]="tab1">Casos</ion-tab>
-      <ion-tab [root]="tab2">Processos</ion-tab>
+      <ion-tab [root]="tab1" tabTitle="Casos">Casos</ion-tab>
+      <ion-tab [root]="tab2" tabTitle="Processos">Processos</ion-tab>
     </ion-tabs>
   </ion-content>
 </ion-content>
