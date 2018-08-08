@@ -1,5 +1,5 @@
-import { Component, ViewChild } from '@angular/core';
-import { NavController, MenuController, Tabs, ModalController } from 'ionic-angular';
+import { Component } from '@angular/core';
+import { NavController, MenuController, ModalController } from 'ionic-angular';
 import { InternoPage } from '../interno/interno';
 import { JusticaPage } from '../justica/justica';
 import { NotificacaoPage } from '../notificacao/notificacao';
@@ -11,8 +11,6 @@ import { PerfilPage } from '../perfil/perfil';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
-  // @ViewChild('myTabs') tabRef: Tabs;
 
   public tab1 = InternoPage;
   public tab2 = JusticaPage;
@@ -29,11 +27,11 @@ export class HomePage {
 
   }
 
-  public goTo() {
+  public goToNotification() {
 
-    let profileModal = this.modalCtrl.create(NotificacaoPage);
+    let notificationModal = this.modalCtrl.create(NotificacaoPage);
 
-    profileModal.present();
+    notificationModal.present();
   }
 
   public goToPerfil(slug: string){
