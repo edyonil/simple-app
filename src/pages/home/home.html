@@ -20,21 +20,17 @@
 </ion-header>
 
 <ion-content class="no-scroll">
-  <!-- <ion-tabs tabsPlacement="top">
-    <ion-tab [root]="tab1" tabTitle="Interno"></ion-tab>
-    <ion-tab [root]="tab2" tabTitle="Justiça"></ion-tab>
-  </ion-tabs> -->
 
   <div class="content-header">
     <h1 (tap)="goToPerfil('bruno-santana')">Bruno Santana</h1>
     <p>Cliente há 2 anos</p>
-    <ion-icon class="logo-decoration" name="logo-angular"></ion-icon>
+    <img class="logo-decoration" src="/assets/imgs/logo_preto.png" />
   </div>
 
   <div class="processo-header">
     <h2>Seus processos</h2>
   </div>
-  <ion-content>
+  <ion-content class="no-scroll">
     <ion-tabs tabsPlacement='top'>
       <ion-tab [root]="tab1" tabTitle="Casos">Casos</ion-tab>
       <ion-tab [root]="tab2" tabTitle="Processos">Processos</ion-tab>
