@@ -110,6 +110,53 @@ page-home {
   overflow: hidden;
 }
 
+.no-margin {
+    margin: 0 -25px !important;
+    width: calc(100% + 50px) !important;
+}
+
 ion-tab .scroll-content {
-  padding-bottom: 150px !important;
+    padding-bottom: 150px !important;
+    padding: 0 25px !important;
+}
+
+.tabs-md[tabsLayout=icon-hide] .tab-button, .tabs-md[tabsLayout=title-hide] .tab-button, 
+.tabs-md .tab-button.icon-only, .tabs-md .tab-button.has-title-only {    
+    padding: 0 25px;
+}
+
+.tabs-md .tab-button[aria-selected=true] {    
+    border-bottom: 5px solid $primary;
+
+    span {
+        text-transform: uppercase !important;
+        font-weight: 900;    
+        color: $primary !important;
+    }
+}
+
+.tabs-md .tab-button[aria-selected=false] {
+    border-bottom: 1px solid $primary;
+
+    span {
+        text-transform: uppercase !important;
+        font-weight: 900;    
+        color: $light !important;
+    }
+}
+
+.tabbar.show-tabbar {
+    background-color: white;
+
+    .tab-button.has-title.has-title-only.disable-hover {
+        padding: 0 25px;
+    }
+
+    .tab-button-text {
+        -webkit-align-self: start;
+        -ms-flex-item-align: start;
+        align-self: start;
+        transform: none !important;
+        -webkit-transform: none !important;
+    }
 }
