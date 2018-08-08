@@ -14,8 +14,8 @@ export class HomePage {
 
   // @ViewChild('myTabs') tabRef: Tabs;
 
-  // tab1 = InternoPage;
-  // tab2 = JusticaPage;
+  public tab1 = InternoPage;
+  public tab2 = JusticaPage;
 
   public itens = {};
 
@@ -26,33 +26,7 @@ export class HomePage {
   ) {
     this.menu.enable(true, 'menu1');
 
-    this.itens = [
-      {
-        action: "FGTS",
-        date: "23/12/2019",
-        resume: "Aguardando envio para o tribunal de justiça do trabalho"
-      },
-      {
-        action: "FGTS",
-        date: "23/12/2019",
-        resume: "Aguardando envio para o tribunal de justiça do trabalho"
-      },
-      {
-        action: "FGTS",
-        date: "23/12/2019",
-        resume: "Aguardando envio para o tribunal de justiça do trabalho"
-      },
-      {
-        action: "FGTS",
-        date: "23/12/2019",
-        resume: "Aguardando envio para o tribunal de justiça do trabalho"
-      },
-      {
-        action: "FGTS",
-        date: "23/12/2019",
-        resume: "Aguardando envio para o tribunal de justiça do trabalho"
-      },
-    ]
+
   }
 
   public goTo() {

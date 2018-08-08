@@ -19,7 +19,7 @@ export class JusticaPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad JusticaPage');
+
   }
 
 }

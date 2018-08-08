@@ -15,11 +15,44 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class InternoPage {
 
+  public itens: Array<any>;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad InternoPage');
+    this.itens = [
+      {
+        action: "FGTS",
+        date: "23/12/2019",
+        resume: "Aguardando envio para o tribunal de justiça do trabalho"
+      },
+      {
+        action: "FGTS",
+        date: "23/12/2019",
+        resume: "Aguardando envio para o tribunal de justiça do trabalho"
+      },
+      {
+        action: "FGTS",
+        date: "23/12/2019",
+        resume: "Aguardando envio para o tribunal de justiça do trabalho"
+      },
+      {
+        action: "FGTS",
+        date: "23/12/2019",
+        resume: "Aguardando envio para o tribunal de justiça do trabalho"
+      },
+      {
+        action: "FGTS",
+        date: "23/12/2019",
+        resume: "Aguardando envio para o tribunal de justiça do trabalho"
+      },
+      {
+        action: "TR",
+        date: "23/12/2019",
+        resume: "Aguardando envio para o tribunal de justiça do trabalho"
+      }
+    ]
   }
 
 }

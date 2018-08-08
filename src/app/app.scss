@@ -26,7 +26,6 @@ body {
   font-family: $fonte-pattern;
   font-weight: normal;
   background-color: #FEFFFE;
-  border-left: 5px solid $primary;
 }
 ion-content.content {
   background-color: #FEFFFE;
@@ -150,7 +149,7 @@ ion-header {
     // left: 0;
     // padding-left: 0;
   }
- 
+
   .toolbar-title {
     font-size: 25px;
   }
@@ -164,7 +163,7 @@ ion-header {
     padding: 20px 0;
     padding-right: 0 !important;
   }
-  
+
   button .item-inner .item-end {
     margin-right: 0 !important;
   }

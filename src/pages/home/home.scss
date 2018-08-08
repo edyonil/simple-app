@@ -1,8 +1,8 @@
 page-home {
-
+    border-left: 5px solid $primary;
     ion-header .toolbar {
         padding-right: 20px;
-        padding-left: 10px;       
+        padding-left: 10px;
     }
 
     .scroll-content {
@@ -57,7 +57,7 @@ page-home {
         display: block;
     }
 
-    .content-header {        
+    .content-header {
         margin-bottom: 30px;
         position: relative;
 
@@ -65,7 +65,7 @@ page-home {
             cursor: pointer;
             margin-bottom: 0;
         }
-    
+
         h1::after {
             content: "__";
             position: absolute;
@@ -104,4 +104,12 @@ page-home {
         right: -47px;
         font-size: 50px;
     }
+}
+
+.no-scroll > .scroll-content {
+  overflow: hidden;
+}
+
+ion-tab .scroll-content {
+  padding-bottom: 150px !important;
 }
