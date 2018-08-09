@@ -1,3 +1,74 @@
+@import "../../theme/variables";
 page-acompanhamento-lista-mensagens {
+  .item {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    .item-inner {
+      border-bottom:0 !important;
+    }
+    .mensagem-topo {
+      font-size: 12px;
+      font-weight: 900;
+      font-family: $fonte-pattern;
+      color: $primary;
+      text-align: right;
+      margin-bottom: 10px;
+      .mensagem-data {
+        font-weight: 300;
+      }
+    }
+    .mensagem-conteudo {
+      width: 100%;
+      min-height: 50px;
+      background-color: $primary;
+      padding: 15px;
+      border-radius: 5px;
+      p {
+        color: #fff;
+      }
+    }
+  }
+  .usuario {
+    .mensagem-topo {
+      text-align: left;
+    }
+    .mensagem-conteudo {
+      background-color: $secondary;
+    }
+  }
 
+  .input-envio {
+    position: fixed;
+    bottom: 70px;
+    width: 100%;
+    z-index: 10000;
+    background-color: #FEFFFE;
+    padding:15px;
+    display: flex;
+    box-shadow: 0 0 30px 5px rgba(255, 255, 255, 0.45);
+    align-items: center;
+    button {
+      width: 45px;
+      height: 45px;
+      background-color: $secondary;
+    }
+    textarea {
+      flex:1;
+      margin-right: 10px;
+      border: 1px solid $primary;
+      outline:0;
+      border-radius: 5px;
+      height: 45px;
+      overflow: auto;
+      padding: 10px;
+      font-size: 14px;
+      color: $primary;
+      font-weight: 300;
+    }
+  }
+
+  .scroll-content {
+    padding-bottom: 70px !important;
+  }
 }

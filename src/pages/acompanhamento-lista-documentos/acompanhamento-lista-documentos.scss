@@ -1,3 +1,45 @@
+@import "../../theme/variables";
 page-acompanhamento-lista-documentos {
-
+  .item {
+    padding: 20px 0px 20px 0px;
+    border-bottom: solid 1px rgba($color: $primary, $alpha: 0.14) !important;
+    h2 {
+      margin-bottom: 5px;
+    }
+    &:first-child {
+      padding-top: 0px;
+    }
+    &:last-child {
+      border:0 !important;
+    }
+  }
+  .col {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .documento-date {
+    font-family: $fonte-pattern;
+    font-size: 16px;
+    color: $secondary;
+    font-weight: 300;
+  }
+ .path {
+   width: 50px;
+   max-width: 50px;
+   height: 50px;
+   margin-right: 15px;
+   img {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+   }
+ }
+ .icone {
+  width: 30px;
+  max-width: 30px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+ }
 }

@@ -5,10 +5,15 @@
         <img src="/assets/icon/close.png" alt="Close">
       </button>
     </ion-buttons>
+    <ion-buttons right *ngIf="habilitarBotaoMaisDocumento">
+        <button ion-button icon-only (click)="maisDocumento()">
+            <img src="/assets/icon/plus.png" alt="Close">
+        </button>
+      </ion-buttons>
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-  <ion-tabs>
+  <ion-tabs (ionChange)="onChangeTabs($event)">
       <ion-tab [root]="tabs.primeira.page" tabTitle="{{tabs.primeira.title}}" tabIcon="{{tabs.primeira.icon}}"></ion-tab>
       <ion-tab [root]="tabs.segunda.page" tabTitle="{{tabs.segunda.title}}" tabIcon="{{tabs.segunda.icon}}"></ion-tab>
       <ion-tab [root]="tabs.terceira.page" tabTitle="{{tabs.terceira.title}}" tabIcon="{{tabs.terceira.icon}}"></ion-tab>

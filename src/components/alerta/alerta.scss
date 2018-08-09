@@ -1,0 +1,57 @@
+@import "../../theme/variables";
+alerta {
+  .full-alerta {
+    display: flex;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:10000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: $primary, $alpha: 0.71);
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    .content {
+      width: 100%;
+      border-radius: 10px;
+      background-color: #FFF;
+      padding: 20px 30px;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.28);
+      .header-alerta {
+        padding-bottom: 3px;
+        border-bottom: solid 1px #0b4a76;
+        display: flex;
+        justify-content: space-between;
+        button {
+          background-color: #FFF;
+          img {
+            width: 12px;
+            height: 12px;
+          }
+        }
+        h3 {
+          font-size: 16px;
+          font-weight: bold;
+          color: $dark;
+          text-transform: uppercase;
+        }
+      }
+      .body {
+        min-height: 100px;
+        display: flex;
+        align-items: center;
+        font-family: $fonte-pattern;
+        font-weight: 300;
+        line-height: 24px;
+      }
+    }
+
+    &.erro {
+      background-color: rgba($color: $danger, $alpha: 0.71);
+      .header-alerta h3 {
+        color: $danger;
+      }
+    }
+  }
+}

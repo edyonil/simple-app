@@ -15,8 +15,8 @@
   <div class="documento-header">
     <h1>Enviar documento</h1>
   </div>
-  
-  <form  [formGroup]="docForm" (ngSubmit)="onSubmit(); $event.preventDefault()">
+
+  <form  [formGroup]="docForm" (ngSubmit)="enviarDocumento(); $event.preventDefault()">
     <ion-item>
       <ion-select formControlName="docFormType" interface="popover">
         <ion-option selected="true">Selecione o tipo de documento</ion-option>
@@ -24,7 +24,7 @@
       </ion-select>
     </ion-item>
     <ion-item>
-      <div class="custom_file_upload">			
+      <div class="custom_file_upload">
         <div class="file_upload">
           <img src="/assets/imgs/nuvem.png" class="image">
           <input type="file" formControlName="docFormFile">		
@@ -43,3 +43,11 @@
   </form>
 
 </ion-content>
+
+<alerta
+  [exibir]="alerta.exibir"
+  [conteudo]="alerta.conteudo"
+  [erro]="alerta.erro"
+  (onClose)="alerta.exibir = false"
+  >
+</alerta>

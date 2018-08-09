@@ -17,6 +17,12 @@ import { HomePage } from '../home/home';
 })
 export class DocumentoPage {
 
+  public alerta = {
+    exibir: false,
+    conteudo: 'Foto enviada com sucesso',
+    erro: false
+  }
+
   public doctypes = [];
   public docForm: FormGroup;
 
@@ -31,12 +37,10 @@ export class DocumentoPage {
       docFormType: [null, [Validators.required]],
       docFormFile: [null, [Validators.required]]
     });
-
   }
-
+  
   ionViewDidLoad() {
     this.getDocuments();
-    console.log('ionViewDidLoad DocumentoPage');
   }
 
   public getDocuments(){
@@ -59,7 +63,7 @@ export class DocumentoPage {
       },
       {
         name: "Sega Saturn",
-        value:"saturn"        
+        value:"saturn"
       },
       {
         name: "SNES",
@@ -72,22 +76,8 @@ export class DocumentoPage {
     console.log(event);
   }
 
-  public onSubmit(){
+  public enviarDocumento() {
     console.log(this.docForm.value);
-
-    let alert = this.alertCtrl.create({
-      title: 'Sucesso',
-      message: 'A foto do documento foi enviada com sucesso',
-      buttons: [
-        {
-          text: 'Fechar',
-          role: 'cancel',
-          handler: () => {
-            this.navCtrl.setRoot(HomePage)
-          }
-        },
-      ]
-    });
-    alert.present();
+    this.alerta.exibir = true;
   }
 }

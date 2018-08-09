@@ -1,0 +1,16 @@
+<div class="full-alerta"
+    *ngIf="exibir"
+    [class.erro]="erro"
+  >
+  <div class="content">
+    <div class="header-alerta">
+      <h3>{{(erro) ? 'Erro' : 'Sucesso'}}</h3>
+      <button ion-button (tap)="onCloseInterno()">
+        <img src="/assets/icon/close.png" />
+      </button>
+    </div>
+    <div class="body">
+      {{conteudo}}
+    </div>
+  </div>
+</div>
