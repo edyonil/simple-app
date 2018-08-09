@@ -166,4 +166,29 @@ ion-header {
   button .item-inner .item-end {
     margin-right: 0 !important;
   }
+
+}
+
+//modal de alert
+ion-app ion-alert { 
+  ion-backdrop {
+    background-color: $primary !important;
+  }
+
+  .alert-wrapper {
+    border-radius: 5px !important;
+
+    .alert-head {
+      border-bottom: 1px solid $primary;
+      margin: 0 20px;
+      padding: 20px 0;
+    }
+
+    .alert-message {
+      padding: 24px;
+      overflow: hidden;
+    }
+  }
+
+
 }
