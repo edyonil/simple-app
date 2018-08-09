@@ -15,7 +15,41 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AcompanhamentoListaDocumentosPage {
 
+  public items: Array<any>;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.items = [
+      {
+        path: "/assets/imgs/documento_1.jpg",
+        tipo: "Carteira de identidade",
+        data: "12/12/2018"
+      },
+      {
+        path: "/assets/imgs/documento_2.jpg",
+        tipo: "Contra Cheque",
+        data: "12/12/2018"
+      },
+      {
+        path: "/assets/imgs/documento_1.jpg",
+        tipo: "Carteira de identidade",
+        data: "12/12/2018"
+      },
+      {
+        path: "/assets/imgs/documento_1.jpg",
+        tipo: "Carteira de identidade",
+        data: "12/12/2018"
+      },
+      {
+        path: "/assets/imgs/documento_2.jpg",
+        tipo: "Contra Cheque",
+        data: "12/12/2018"
+      },
+      {
+        path: "/assets/imgs/documento_1.jpg",
+        tipo: "Carteira de identidade",
+        data: "12/12/2018"
+      }
+    ]
   }
 
   ionViewDidLoad() {

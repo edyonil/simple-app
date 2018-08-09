@@ -22,10 +22,11 @@
   padding: 0;
 }
 
-body {
+body, .ion-content {
   font-family: $fonte-pattern;
   font-weight: normal;
   background-color: #FEFFFE;
+
 }
 ion-content.content {
   background-color: #FEFFFE;

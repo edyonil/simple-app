@@ -15,7 +15,7 @@
   <div class="documento-header">
     <h1>Enviar documento</h1>
   </div>
-  
+
   <form>
     <ion-item>
       <ion-select interface="popover">
@@ -24,22 +24,30 @@
       </ion-select>
     </ion-item>
     <ion-item>
-      <div class="custom_file_upload">			
+      <div class="custom_file_upload">
         <div class="file_upload">
           <img src="/assets/imgs/nuvem.png" class="image">
-          <input type="file" id="{{fileId}}" (change)="onClick($event)" #fileInput>		
+          <input type="file" id="{{fileId}}"  #fileInput>
         </div>
       </div>
       <!-- <ion-input type="file"></ion-input> -->
     </ion-item>
     <ion-row>
       <ion-col>
-        <button type="submit" ion-button class="button-enter" (click)="login()">Enviar</button>
+        <button type="submit" ion-button class="button-enter" (click)="enviarDocumento()">Enviar</button>
       </ion-col>
       <ion-col align-self-center text-center>
-        <a href="" right class="button-cancel">Cancelar</a>
+        <a (tap)="navCtrl.pop()" right class="button-cancel">Cancelar</a>
       </ion-col>
     </ion-row>
   </form>
 
 </ion-content>
+
+<alerta
+  [exibir]="alerta.exibir"
+  [conteudo]="alerta.conteudo"
+  [erro]="alerta.erro"
+  (onClose)="alerta.exibir = false"
+  >
+</alerta>

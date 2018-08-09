@@ -19,6 +19,7 @@ import {AcompanhamentoListaMensagensPage} from '../pages/acompanhamento-lista-me
 import {AcompanhamentoPage} from '../pages/acompanhamento/acompanhamento';
 import {AcompanhamentoListaDocumentosPage} from '../pages/acompanhamento-lista-documentos/acompanhamento-lista-documentos';
 import {DocumentoPage} from '../pages/documento/documento';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
     declarations: [
@@ -40,6 +41,7 @@ import {DocumentoPage} from '../pages/documento/documento';
     ],
     imports: [
         BrowserModule,
+        ComponentsModule,
         IonicModule.forRoot(MyApp, {
             mode: 'md'
         }),

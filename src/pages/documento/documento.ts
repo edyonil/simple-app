@@ -17,12 +17,17 @@ export class DocumentoPage {
 
   public doctypes = [];
 
+  public alerta = {
+    exibir: false,
+    conteudo: 'Foto enviada com sucesso',
+    erro: false
+  }
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     this.getDocuments();
-    console.log('ionViewDidLoad DocumentoPage');
   }
 
   public getDocuments(){
@@ -45,7 +50,7 @@ export class DocumentoPage {
       },
       {
         name: "Sega Saturn",
-        value:"saturn"        
+        value:"saturn"
       },
       {
         name: "SNES",
@@ -56,5 +61,9 @@ export class DocumentoPage {
 
   public onSelect(event){
     console.log(event);
+  }
+
+  public enviarDocumento() {
+    this.alerta.exibir = true;
   }
 }

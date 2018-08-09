@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AcompanhamentoHomePage } from '../acompanhamento-home/acompanhamento-home';
 import { AcompanhamentoListaDocumentosPage } from '../acompanhamento-lista-documentos/acompanhamento-lista-documentos';
 import { AcompanhamentoListaMensagensPage } from '../acompanhamento-lista-mensagens/acompanhamento-lista-mensagens';
+import { DocumentoPage } from '../documento/documento';
 
 /**
  * Generated class for the AcompanhamentoPage page.
@@ -17,6 +18,9 @@ import { AcompanhamentoListaMensagensPage } from '../acompanhamento-lista-mensag
   templateUrl: 'acompanhamento.html',
 })
 export class AcompanhamentoPage {
+
+
+  public habilitarBotaoMaisDocumento = false;
 
   public tabs = {
     primeira: {
@@ -41,6 +45,18 @@ export class AcompanhamentoPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AcompanhamentoPage');
+  }
+
+  onChangeTabs(event) {
+    if(event.index == 2) {
+      this.habilitarBotaoMaisDocumento = true;
+    } else {
+      this.habilitarBotaoMaisDocumento = false;
+    }
+  }
+
+  maisDocumento() {
+    this.navCtrl.push(DocumentoPage);
   }
 
 }
