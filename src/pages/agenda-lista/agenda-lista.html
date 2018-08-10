@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+        <button ion-button icon-only (click)="agendar()">
+            <img src="/assets/icon/plus.png" />
+        </button>
+      </ion-buttons>
+      <button end ion-button menuToggle margin-right>
+          <img src="/assets/icon/menu.png" />
+      </button>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <h1>Agenda</h1>
+
+  <ion-list no-lines>
+    <ion-item *ngFor="let item of items">
+      <ion-row>
+        <ion-col>
+          <span class="agenda-dia">{{item.data.dia}}</span>
+        </ion-col>
+        <ion-col>
+            <h2 class="agenda-mes-ano">{{item.data.mes}} de {{item.data.ano}}</h2>
+            <h3 class="agenda-descricao">{{item.descricao}}</h3>
+        </ion-col>
+        <ion-col>
+            <ion-icon name="arrow-forward"></ion-icon>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>
+            <span class="agenda-hora">{{item.horario}}</span>
+          </ion-col>
+          <ion-col>
+              <span class="agenda-status {{item.status.slug}}">
+                {{item.status.descricao}}
+              </span>
+          </ion-col>
+      </ion-row>
+    </ion-item>
+  </ion-list>
+</ion-content>

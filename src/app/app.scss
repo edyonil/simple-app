@@ -25,11 +25,11 @@
 body, .ion-content {
   font-family: $fonte-pattern;
   font-weight: normal;
-  background-color: #FEFFFE;
+  background-color: #fbfbfb;
 
 }
 ion-content.content {
-  background-color: #FEFFFE;
+  background-color: #fbfbfb;
 }
 
 h1, h2, h3, h4, h4 {
@@ -168,4 +168,8 @@ ion-header {
     margin-right: 0 !important;
   }
 
+}
+
+.item {
+  background-color: #fbfbfb;
 }

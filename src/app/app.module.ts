@@ -20,6 +20,7 @@ import {AcompanhamentoPage} from '../pages/acompanhamento/acompanhamento';
 import {AcompanhamentoListaDocumentosPage} from '../pages/acompanhamento-lista-documentos/acompanhamento-lista-documentos';
 import {DocumentoPage} from '../pages/documento/documento';
 import { ComponentsModule } from '../components/components.module';
+import { AgendaListaPage } from '../pages/agenda-lista/agenda-lista';
 
 @NgModule({
     declarations: [
@@ -37,7 +38,8 @@ import { ComponentsModule } from '../components/components.module';
         AcompanhamentoHomePage,
         AcompanhamentoListaDocumentosPage,
         AcompanhamentoListaMensagensPage,
-        DocumentoPage
+        DocumentoPage,
+        AgendaListaPage
     ],
     imports: [
         BrowserModule,
@@ -62,7 +64,8 @@ import { ComponentsModule } from '../components/components.module';
         AcompanhamentoHomePage,
         AcompanhamentoListaDocumentosPage,
         AcompanhamentoListaMensagensPage,
-        DocumentoPage
+        DocumentoPage,
+        AgendaListaPage
     ],
     providers: [
         StatusBar,
