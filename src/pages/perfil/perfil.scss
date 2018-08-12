@@ -33,6 +33,10 @@ page-perfil {
         p {
             color: $primary;
         }
+
+        .item.item-block.item-input {
+            padding-left: 0;
+        }
     }
 
     .dados-pessoais {
@@ -46,6 +50,10 @@ page-perfil {
                     margin: 0;
                 }   
             } 
+        }
+        ion-list-header {
+            padding-left: 0;
+            margin-bottom: 0;
         }
     }
 

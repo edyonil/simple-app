@@ -17,6 +17,8 @@ export class PerfilPage {
 
   public perfil = {};
 
+  edit: boolean = false;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -74,6 +76,9 @@ export class PerfilPage {
 
   public editar(slug){
     console.log(slug);
+    this.edit = true;
+
+    this.getUser(slug);
     // this.navCtrl.push(PerfilEditPage);
   }
 
