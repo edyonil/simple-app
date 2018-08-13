@@ -26,111 +26,115 @@
     <div class="perfil-header">
       <h1>Seu Perfil</h1>
     </div>
-    <div class="dados-perfil">
-      <div *ngIf="!edit">
-        <h1>{{perfil.name}}</h1>
-        <p>{{perfil.age}}</p>
+    <div *ngIf="!edit">
+      <div class="dados-perfil">
+          <h1>{{perfil.name}}</h1>
+          <p>{{perfil.age}}</p>      
+      </div>    
+      <div class="dados-pessoais">
+        <h2>Dados Pessoais</h2>
+        <ion-list>
+          <div ion-item>
+            <small ><strong>CPF</strong></small>
+            <div class="item-note" item-end>
+              {{perfil.cpf}}
+            </div>
+          </div>
+          
+          <div ion-item>
+            <small><strong>DATA DE NASCIMENTO</strong></small>
+            <div class="item-note" item-end>
+              {{perfil.dateBirth}}
+            </div>
+          </div>
+
+          <div ion-item>
+            <small><strong>PIS</strong></small>
+            <div class="item-note" item-end>
+              {{perfil.pis}}
+            </div>
+          </div>
+
+          <div ion-item>
+            <small><strong>ESTADO CIVIL</strong></small>
+            <div class="item-note" item-end>
+              {{perfil.civil}}
+            </div>
+          </div>
+
+          <div ion-item>
+            <small><strong>PROFISSÃO</strong></small>
+            <div class="item-note" item-end>
+              {{perfil.profissao}}
+            </div>
+          </div>
+
+          <div ion-item>
+            <small><strong>APOSENTADO(A)</strong></small>
+            <div class="item-note" item-end>
+              {{perfil.aposentado?'Sim':'Não'}} <span *ngIf="perfil.aposentado">, Desde {{perfil.aposentadoAno}}</span>
+            </div>
+          </div>
+
+        </ion-list>
       </div>
-      <div *ngIf="edit" ion-item>
-          <ion-label>NOME</ion-label>
-          <ion-input type="text" placeholder="Nome" value="{{perfil.name}}"></ion-input>
-      </div>
-      <div *ngIf="edit" ion-item>
-          <ion-label>IDADE</ion-label>
-          <ion-input type="text" placeholder="Idade" value="{{perfil.age}}"></ion-input>
-      </div>
-    </div>    
-    <div class="dados-pessoais">
-      <h2>Dados Pessoais</h2>
-      <ion-list>
-        <div *ngIf="!edit" ion-item>
-          <small ><strong>CPF</strong></small>
-          <div class="item-note" item-end>
-            {{perfil.cpf}}
-          </div>
-        </div>
-
-        <div *ngIf="edit" ion-item>
-          <ion-label>CPF</ion-label>
-          <ion-input type="text" placeholder="CPF" value="{{perfil.cpf}}"></ion-input>
-        </div>
-        
-        <div *ngIf="!edit" ion-item>
-          <small><strong>DATA DE NASCIMENTO</strong></small>
-          <div class="item-note" item-end>
-            {{perfil.dateBirth}}
-          </div>
-        </div>
-
-        <div *ngIf="edit" ion-item>
-          <ion-label>DATA DE NASCIMENTO</ion-label>
-          <ion-input type="date" placeholder="Data de Nascimento" value="{{perfil.dateBirth}}"></ion-input>
-        </div>
-
-        <div *ngIf="!edit" ion-item>
-          <small><strong>PIS</strong></small>
-          <div class="item-note" item-end>
-            {{perfil.pis}}
-          </div>
-        </div>
-
-        <div *ngIf="edit" ion-item>
-          <ion-label>PIS</ion-label>
-          <ion-input type="text" placeholder="PIS" value="{{perfil.pis}}"></ion-input>
-        </div>
-
-        <div *ngIf="!edit" ion-item>
-          <small><strong>ESTADO CIVIL</strong></small>
-          <div class="item-note" item-end>
-            {{perfil.civil}}
-          </div>
-        </div>
-
-        <div *ngIf="edit" ion-item>
-          <ion-label>ESTADO CIVIL</ion-label>
-          <ion-input type="text" placeholder="Estado Civil" value="{{perfil.civil}}"></ion-input>
-        </div>
-
-        <div *ngIf="!edit" ion-item>
-          <small><strong>PROFISSÃO</strong></small>
-          <div class="item-note" item-end>
-            {{perfil.profissao}}
-          </div>
-        </div>
-
-        <div *ngIf="edit" ion-item>
-          <ion-label>PROFISSÃO</ion-label>
-          <ion-input type="text" placeholder="Profissão" value="{{perfil.profissao}}"></ion-input>
-        </div>
-
-        <div *ngIf="!edit" ion-item>
-          <small><strong>APOSENTADO(A)</strong></small>
-          <div class="item-note" item-end>
-            {{perfil.aposentado?'Sim':'Não'}} <span *ngIf="perfil.aposentado">, Desde {{perfil.aposentadoAno}}</span>
-          </div>
-        </div>
-
-      
-          <ion-list *ngIf="edit" radio-group>
-            <ion-list-header>
-              APOSENTADO(A)
-            </ion-list-header>
-            <ion-item>
-              <ion-label>Sim</ion-label>
-              <ion-radio value="true" [checked]="perfil.aposentado"></ion-radio>
-            </ion-item>
-            <ion-item>
-              <ion-label>Não</ion-label>
-              <ion-radio value="false" [checked]="!perfil.aposentado"></ion-radio>
-            </ion-item>
-          </ion-list>
-   
-
-        <div *ngIf="edit && perfil.aposentado" ion-item>
-          <ion-label>APOSENTADO ANO</ion-label>
-          <ion-input type="text" value="{{perfil.aposentadoAno}}"></ion-input>
-        </div>
-
-      </ion-list>
     </div>
+    <form *ngIf="edit" [formGroup]="perfilForm" (ngSubmit)="onSubmit(); $event.preventDefault()">
+        <div class="dados-perfil">
+          <div ion-item>
+              <ion-label>NOME</ion-label>
+              <ion-input type="text" placeholder="Nome" formControlName="nome"></ion-input>
+          </div>
+          <div ion-item>
+              <ion-label>IDADE</ion-label>
+              <ion-input type="text" placeholder="Idade" formControlName="idade"></ion-input>
+          </div>
+        </div> 
+        <div class="dados-pessoais">
+          <h2>Dados Pessoais</h2>
+          <ion-list>      
+            <div ion-item>
+              <ion-label>CPF</ion-label>
+              <ion-input type="text" placeholder="CPF" formControlName="cpf"></ion-input>
+            </div>
+            <div ion-item>
+              <ion-label>DATA DE NASCIMENTO</ion-label>
+              <ion-input type="date" placeholder="Data de Nascimento" formControlName="dataNascimento"></ion-input>
+            </div>
+            <div ion-item>
+              <ion-label>PIS</ion-label>
+              <ion-input type="text" placeholder="PIS" formControlName="pis"></ion-input>
+            </div>
+            <div ion-item>
+              <ion-label>ESTADO CIVIL</ion-label>
+              <ion-input type="text" placeholder="Estado Civil" formControlName="estadoCivil"></ion-input>
+            </div>
+            <div ion-item>
+              <ion-label>PROFISSÃO</ion-label>
+              <ion-input type="text" placeholder="Profissão" formControlName="profissao"></ion-input>
+            </div>
+
+            <ion-list radio-group formControlName="aposentado">
+              <ion-list-header>
+                APOSENTADO(A)
+              </ion-list-header>
+              <ion-item>
+                <ion-label>Sim</ion-label>
+                <ion-radio value="true"></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label>Não</ion-label>
+                <ion-radio value="false"></ion-radio>
+              </ion-item>
+            </ion-list>
+
+            <div *ngIf="perfilForm.value.aposentado" ion-item>
+              
+              <ion-label>APOSENTADO ANO {{perfilForm.value.aposentado}}</ion-label>
+              <ion-input type="text" formControlName="aposentadoAno"></ion-input>
+            </div>
+          </ion-list>
+          <button ion-button primary type="submit" [disabled]="perfilForm.invalid">Enviar</button>
+        </div>
+      </form>
 </ion-content>

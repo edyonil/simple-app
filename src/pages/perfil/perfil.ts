@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 /**
  * Generated class for the PerfilPage page.
@@ -15,11 +16,31 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PerfilPage {
 
-  public perfil = {};
+  public perfil:any = {};
+  public perfilForm: FormGroup;
 
   edit: boolean = false;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public formBuilder: FormBuilder
+  ) {
+
+    let cpfRegex = "([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})";
+    // let pisRegex = "";
+
+    this.perfilForm = this.formBuilder.group({
+      nome: [null, [Validators.required]],
+      idade: [null, [Validators.required]],
+      cpf: [null, Validators.compose([Validators.required, Validators.pattern(cpfRegex)])],
+      dataNascimento: [null, [Validators.required]],
+      pis: [null, [Validators.required]],
+      estadoCivil: [null, [Validators.required]],
+      profissao: [null, [Validators.required]],
+      aposentado: [null, [Validators.required]],
+      aposentadoAno: [null]
+    });
   }
 
   ionViewDidLoad() {
@@ -79,7 +100,23 @@ export class PerfilPage {
     this.edit = true;
 
     this.getUser(slug);
-    // this.navCtrl.push(PerfilEditPage);
+
+    this.perfilForm = this.formBuilder.group({
+      nome: [this.perfil.name],
+      idade: [this.perfil.age],
+      cpf: [this.perfil.cpf],
+      dataNascimento: [this.perfil.dateBirth],
+      pis: [this.perfil.pis],
+      estadoCivil: [this.perfil.civil],
+      profissao: [this.perfil.profissao],
+      aposentado: [this.perfil.aposentado],
+      aposentadoAno: [this.perfil.aposentadoAno]
+    });
+  }
+
+  public onSubmit(){
+    let perfilForm = this.perfilForm.value;
+    console.log(perfilForm);
   }
 
 
