@@ -21,6 +21,7 @@ import {AcompanhamentoListaDocumentosPage} from '../pages/acompanhamento-lista-d
 import {DocumentoPage} from '../pages/documento/documento';
 import { ComponentsModule } from '../components/components.module';
 import { AgendaListaPage } from '../pages/agenda-lista/agenda-lista';
+import { AgendaVisualizarPage } from '../pages/agenda-visualizar/agenda-visualizar';
 
 @NgModule({
     declarations: [
@@ -39,7 +40,8 @@ import { AgendaListaPage } from '../pages/agenda-lista/agenda-lista';
         AcompanhamentoListaDocumentosPage,
         AcompanhamentoListaMensagensPage,
         DocumentoPage,
-        AgendaListaPage
+        AgendaListaPage,
+        AgendaVisualizarPage
     ],
     imports: [
         BrowserModule,
@@ -65,7 +67,8 @@ import { AgendaListaPage } from '../pages/agenda-lista/agenda-lista';
         AcompanhamentoListaDocumentosPage,
         AcompanhamentoListaMensagensPage,
         DocumentoPage,
-        AgendaListaPage
+        AgendaListaPage,
+        AgendaVisualizarPage
     ],
     providers: [
         StatusBar,

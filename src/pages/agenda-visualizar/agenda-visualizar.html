@@ -1,0 +1,43 @@
+<ion-content padding>
+  <ion-buttons right>
+    <button ion-button icon-only (click)="navCtrl.pop()">
+        <img src="/assets/icon/arrow_down.png" />
+    </button>
+  </ion-buttons>
+
+  <h1>{{item.titulo}}</h1>
+  <ion-item class="detalhes" no-lines>
+    <ion-row>
+      <ion-col>
+        <img src="/assets/icon/agenda.png" />
+      </ion-col>
+      <ion-col>
+        <h3>{{item.data}}</h3>
+      </ion-col>
+    </ion-row>
+    <ion-row >
+      <ion-col>
+        <img src="/assets/icon/horas.png" />
+      </ion-col>
+      <ion-col>
+      <h3>{{item.horario}} <span>{{item.previsao}}</span></h3>
+      </ion-col>
+    </ion-row>
+  </ion-item>
+
+  <h4>Detalhes</h4>
+  <ion-item class="outros" no-lines>
+    <ion-row>
+      <ion-col>Nova Causa</ion-col>
+      <ion-col>{{item.novaCausa}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>Tipo</ion-col>
+      <ion-col>{{item.tipo}}</ion-col>
+    </ion-row>
+  </ion-item>
+  <ion-item no-lines>
+    <h4>Observações</h4>
+    <p>{{item.observacao}}</p>
+  </ion-item>
+</ion-content>

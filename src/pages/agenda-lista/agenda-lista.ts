@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { AgendaVisualizarPage } from '../agenda-visualizar/agenda-visualizar';
 
 /**
  * Generated class for the AgendaListaPage page.
@@ -17,7 +18,7 @@ export class AgendaListaPage {
 
   public items: Array<any>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
 
   }
 
@@ -108,6 +109,15 @@ export class AgendaListaPage {
         }
       }
     ]
+  }
+
+  public goTo(item) {
+    let modal = this.modalCtrl.create(AgendaVisualizarPage, null, {
+      enterAnimation: 'modal-slide-in',
+      leaveAnimation: 'modal-slide-out',
+    });
+
+    modal.present();
   }
 
 }
