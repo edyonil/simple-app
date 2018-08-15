@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import { AgendaVisualizarPage } from '../agenda-visualizar/agenda-visualizar';
+import { AgendaCadastroPage } from '../agenda-cadastro/agenda-cadastro';
 
 /**
  * Generated class for the AgendaListaPage page.
@@ -118,6 +119,10 @@ export class AgendaListaPage {
     });
 
     modal.present();
+  }
+
+  public agendar() {
+    this.navCtrl.push(AgendaCadastroPage);
   }
 
 }

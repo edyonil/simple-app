@@ -1,5 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {ErrorHandler, NgModule} from '@angular/core';
+import {ErrorHandler, NgModule, LOCALE_ID} from '@angular/core';
 import {IonicApp, IonicErrorHandler, IonicModule} from 'ionic-angular';
 
 import {MyApp} from './app.component';
@@ -22,6 +22,12 @@ import {DocumentoPage} from '../pages/documento/documento';
 import { ComponentsModule } from '../components/components.module';
 import { AgendaListaPage } from '../pages/agenda-lista/agenda-lista';
 import { AgendaVisualizarPage } from '../pages/agenda-visualizar/agenda-visualizar';
+import { AgendaCadastroPage } from '../pages/agenda-cadastro/agenda-cadastro';
+import { CalendarModule } from "ion2-calendar";
+import localePt from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(localePt);
 
 @NgModule({
     declarations: [
@@ -41,7 +47,8 @@ import { AgendaVisualizarPage } from '../pages/agenda-visualizar/agenda-visualiz
         AcompanhamentoListaMensagensPage,
         DocumentoPage,
         AgendaListaPage,
-        AgendaVisualizarPage
+        AgendaVisualizarPage,
+        AgendaCadastroPage
     ],
     imports: [
         BrowserModule,
@@ -49,6 +56,7 @@ import { AgendaVisualizarPage } from '../pages/agenda-visualizar/agenda-visualiz
         IonicModule.forRoot(MyApp, {
             mode: 'md'
         }),
+        CalendarModule
     ],
     bootstrap: [IonicApp],
     entryComponents: [
@@ -68,12 +76,13 @@ import { AgendaVisualizarPage } from '../pages/agenda-visualizar/agenda-visualiz
         AcompanhamentoListaMensagensPage,
         DocumentoPage,
         AgendaListaPage,
-        AgendaVisualizarPage
+        AgendaVisualizarPage,
+        AgendaCadastroPage
     ],
     providers: [
         StatusBar,
         SplashScreen,
-        {provide: ErrorHandler, useClass: IonicErrorHandler}
+        {provide: ErrorHandler, useClass: IonicErrorHandler},
     ]
 })
 export class AppModule {

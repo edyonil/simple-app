@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <h1>Agendar</h1>
+  <form [formGroup]="form" (ngSubmit)="enviar(); $event.preventDefault()">
+
+      <ion-label>Qual o motivo?</ion-label>
+      <ion-select formControlName="novo">
+        <ion-option selected="true">Selecione um motivo</ion-option>
+        <ion-option *ngFor="let n of motivo" value="{{n.value}}">{{n.name}}</ion-option>
+      </ion-select>
+      <div *ngIf="form.value.novo == 1">
+        <ion-label>Qual o tipo da nova causa?</ion-label>
+        <ion-select formControlName="tipo">
+          <ion-option selected="true">Selecione um tipo</ion-option>
+          <ion-option *ngFor="let n of tipoNovaCausa" value="{{n.value}}">{{n.name}}</ion-option>
+        </ion-select>
+      </div>
+
+      <ion-label>Escolha uma data</ion-label>
+      <ion-calendar [(ngModel)]="date"
+              formControlName="data"
+              (onChange)="onChange($event)"
+              [options]="optionCalendar"
+              [type]="type"
+              [format]="'YYYY-MM-DD'">
+      </ion-calendar>
+
+      <ion-label>Escolha um horario?</ion-label>
+      <ion-select formControlName="horario">
+        <ion-option selected="true">Horários disponíveis</ion-option>
+        <ion-option *ngFor="let n of horario" value="{{n}}">{{n}}</ion-option>
+      </ion-select>
+
+      <ion-label>Alguma observação?</ion-label>
+      <ion-textarea formControlName="observacao">
+
+      </ion-textarea>
+
+    <ion-row>
+      <ion-col>
+        <button type="submit" ion-button class="button-enter" [disabled]="form.invalid">Enviar</button>
+      </ion-col>
+      <ion-col align-self-center text-center>
+        <a href="#" (click)="navCtrl.pop()" right class="button-cancel">Cancelar</a>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

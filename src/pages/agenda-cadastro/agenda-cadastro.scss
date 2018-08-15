@@ -1,0 +1,87 @@
+@import "../../theme/variables";
+page-agenda-cadastro {
+  h1 {
+    &::before {
+      content: "__";
+      font-size: 37px;
+      color: #0B4A76;
+      float: right;
+      margin-right: -40px;
+      margin-top: -15px;
+    }
+  }
+  form {
+    ion-select {
+      background-color: $secondary;
+      border-radius: 5px;
+      max-width: 100%;
+      color: white;
+      font-size: 1.4rem;
+      position: relative;
+      margin-bottom: 20px;
+      &.select .select-icon .select-icon-inner {
+        color: #FFF !important;
+      }
+    }
+    .select{
+      padding: 13px 15px 13px 16px;
+    }
+
+    .label {
+      font-family: $fonte-pattern;
+      font-weight: 900;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    ion-calendar {
+      margin-bottom: 20px;
+      border-radius: 5px;
+      box-shadow:  0 2px 23px 0 #ededed;
+
+      ion-calendar-week .week-title li {
+        font-family: $fonte-pattern;
+        font-weight: 300;
+      }
+      ion-calendar-month button.days-btn p {
+        font-family: $fonte-pattern;
+        font-weight: 300;
+      }
+    }
+    textarea.text-input {
+      border: 1px solid $primary;
+      outline:0;
+      border-radius: 5px;
+      min-height: 70px;
+      overflow: auto;
+      padding: 10px;
+      font-size: 14px;
+      color: $primary;
+      font-weight: 300;
+      margin: 0;
+      margin-bottom: 30px;
+      width: 100%;
+    }
+    // buttons --------------
+    %button {
+        font-size: 16px;
+        height: 45px;
+    }
+
+    .button-enter {
+        @extend %button;
+        width: 155px;
+        text-transform: capitalize;
+        background-color: $secondary;
+        font-weight: 900;
+    }
+
+    .button-cancel {
+        color: $danger;
+        text-decoration: none;
+    }
+    .col {
+      padding: 0;
+    }
+
+  }
+}
