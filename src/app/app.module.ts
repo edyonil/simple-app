@@ -19,9 +19,12 @@ import {AcompanhamentoListaMensagensPage} from '../pages/acompanhamento-lista-me
 import {AcompanhamentoPage} from '../pages/acompanhamento/acompanhamento';
 import {AcompanhamentoListaDocumentosPage} from '../pages/acompanhamento-lista-documentos/acompanhamento-lista-documentos';
 import {DocumentoPage} from '../pages/documento/documento';
-import { ComponentsModule } from '../components/components.module';
-import { AgendaListaPage } from '../pages/agenda-lista/agenda-lista';
-import { AgendaVisualizarPage } from '../pages/agenda-visualizar/agenda-visualizar';
+import {ComponentsModule} from '../components/components.module';
+import {AgendaListaPage} from '../pages/agenda-lista/agenda-lista';
+import {AgendaVisualizarPage} from '../pages/agenda-visualizar/agenda-visualizar';
+import {CpfPipe} from '../pipes/cpf/cpf';
+import {PisPipe} from '../pipes/pis/pis';
+import {IdadePipe} from '../pipes/idade/idade';
 
 @NgModule({
     declarations: [
@@ -41,7 +44,10 @@ import { AgendaVisualizarPage } from '../pages/agenda-visualizar/agenda-visualiz
         AcompanhamentoListaMensagensPage,
         DocumentoPage,
         AgendaListaPage,
-        AgendaVisualizarPage
+        AgendaVisualizarPage,
+        CpfPipe,
+        PisPipe,
+        IdadePipe
     ],
     imports: [
         BrowserModule,

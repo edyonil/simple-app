@@ -29,7 +29,7 @@
     <div *ngIf="!edit">
       <div class="dados-perfil">
           <h1>{{perfil.name}}</h1>
-          <p>{{perfil.age}}</p>      
+          <p>{{perfil.dateBirth | idade}} anos</p>      
       </div>    
       <div class="dados-pessoais">
         <h2>Dados Pessoais</h2>
@@ -37,21 +37,21 @@
           <div ion-item>
             <small ><strong>CPF</strong></small>
             <div class="item-note" item-end>
-              {{perfil.cpf}}
+              {{perfil.cpf | cpf}}
             </div>
           </div>
           
           <div ion-item>
             <small><strong>DATA DE NASCIMENTO</strong></small>
             <div class="item-note" item-end>
-              {{perfil.dateBirth}}
+              {{perfil.dateBirth | date:'dd/MM/yyyy'}}
             </div>
           </div>
 
           <div ion-item>
             <small><strong>PIS</strong></small>
             <div class="item-note" item-end>
-              {{perfil.pis}}
+              {{perfil.pis | pis}}
             </div>
           </div>
 
@@ -86,8 +86,8 @@
               <ion-input type="text" placeholder="Nome" formControlName="nome"></ion-input>
           </div>
           <div ion-item>
-              <ion-label>IDADE</ion-label>
-              <ion-input type="text" placeholder="Idade" formControlName="idade"></ion-input>
+            <ion-label>DATA DE NASCIMENTO</ion-label>
+            <ion-input type="date" placeholder="Data de Nascimento" formControlName="dataNascimento"></ion-input>
           </div>
         </div> 
         <div class="dados-pessoais">
@@ -96,10 +96,6 @@
             <div ion-item>
               <ion-label>CPF</ion-label>
               <ion-input type="text" placeholder="CPF" formControlName="cpf"></ion-input>
-            </div>
-            <div ion-item>
-              <ion-label>DATA DE NASCIMENTO</ion-label>
-              <ion-input type="date" placeholder="Data de Nascimento" formControlName="dataNascimento"></ion-input>
             </div>
             <div ion-item>
               <ion-label>PIS</ion-label>
@@ -120,17 +116,16 @@
               </ion-list-header>
               <ion-item>
                 <ion-label>Sim</ion-label>
-                <ion-radio value="true"></ion-radio>
+                <ion-radio [value]="true"></ion-radio>
               </ion-item>
               <ion-item>
                 <ion-label>Não</ion-label>
-                <ion-radio value="false"></ion-radio>
+                <ion-radio [value]="false"></ion-radio>
               </ion-item>
             </ion-list>
 
             <div *ngIf="perfilForm.value.aposentado" ion-item>
-              
-              <ion-label>APOSENTADO ANO {{perfilForm.value.aposentado}}</ion-label>
+              <ion-label>APOSENTADO ANO</ion-label>
               <ion-input type="text" formControlName="aposentadoAno"></ion-input>
             </div>
           </ion-list>
